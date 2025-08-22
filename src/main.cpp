@@ -1,9 +1,10 @@
+#define SDL_MAIN_HANDLED
 #include <iostream>
 #include "controller.h"
 #include "game.h"
 #include "renderer.h"
 
-int main() {
+int main(int argc, char* argv[]) {
   constexpr std::size_t kFramesPerSecond{60};
   constexpr std::size_t kMsPerFrame{1000 / kFramesPerSecond};
   constexpr std::size_t kScreenWidth{640};
@@ -19,4 +20,8 @@ int main() {
   std::cout << "Score: " << game.GetScore() << "\n";
   std::cout << "Size: " << game.GetSize() << "\n";
   return 0;
+}
+
+extern "C" int SDL_main(int argc, char* argv[]) {
+  return main(argc, argv);
 }
