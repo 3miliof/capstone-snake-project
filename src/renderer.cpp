@@ -33,12 +33,12 @@ Renderer::Renderer(const std::size_t screen_width,
   }
 }
 
-Renderer::~Renderer() {
+void Renderer::CloseGame() {
   SDL_DestroyWindow(sdl_window);
   SDL_Quit();
 }
 
-void Renderer::Render(Snake const snake, SDL_Point const &food) {
+void Renderer::Render(Snake const snake, SDL_Point const &food, std::vector<SDL_Point> const& bombs) {
   SDL_Rect block;
   block.w = screen_width / grid_width;
   block.h = screen_height / grid_height;
@@ -52,6 +52,14 @@ void Renderer::Render(Snake const snake, SDL_Point const &food) {
   block.x = food.x * block.w;
   block.y = food.y * block.h;
   SDL_RenderFillRect(sdl_renderer, &block);
+  
+  for(auto& bomb : bombs)
+  {
+    SDL_SetRenderDrawColor(sdl_renderer, 0xFF, 0x00, 0x00, 0xFF);
+    block.x = bomb.x * block.w;
+    block.y = bomb.y * block.h;
+    SDL_RenderFillRect(sdl_renderer, &block);
+  }
 
   // Render snake's body
   SDL_SetRenderDrawColor(sdl_renderer, 0xFF, 0xFF, 0xFF, 0xFF);

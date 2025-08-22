@@ -4,7 +4,12 @@
 #include "game.h"
 #include "renderer.h"
 
-int main(int argc, char* argv[]) {
+#include <iostream>
+#include "controller.h"
+#include "game.h"
+#include "renderer.h"
+
+int main() {
   constexpr std::size_t kFramesPerSecond{60};
   constexpr std::size_t kMsPerFrame{1000 / kFramesPerSecond};
   constexpr std::size_t kScreenWidth{640};
@@ -16,6 +21,7 @@ int main(int argc, char* argv[]) {
   Controller controller;
   Game game(kGridWidth, kGridHeight);
   game.Run(controller, renderer, kMsPerFrame);
+  renderer.CloseGame();
   std::cout << "Game has terminated successfully!\n";
   std::cout << "Score: " << game.GetScore() << "\n";
   std::cout << "Size: " << game.GetSize() << "\n";
@@ -23,5 +29,5 @@ int main(int argc, char* argv[]) {
 }
 
 extern "C" int SDL_main(int argc, char* argv[]) {
-  return main(argc, argv);
+  return main();
 }

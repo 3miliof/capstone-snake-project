@@ -6,6 +6,9 @@
 #include "controller.h"
 #include "renderer.h"
 #include "snake.h"
+#include "highscore.h"
+#include <atomic>
+#include <mutex>
 
 class Game {
  public:
@@ -18,6 +21,8 @@ class Game {
  private:
   Snake snake;
   SDL_Point food;
+  std::vector<SDL_Point> bombs;
+  Highscore HighscoreTable;
 
   std::random_device dev;
   std::mt19937 engine;
@@ -27,7 +32,11 @@ class Game {
   int score{0};
 
   void PlaceFood();
-  void Update();
+  void PlaceBomb();
+  bool BombPresent(int& x, int& y);
+  void Update(std::atomic<bool>& running);
+
+  std::mutex bombs_mutex; 
 };
 
 #endif
