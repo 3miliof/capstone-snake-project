@@ -14,8 +14,10 @@ class Highscore
 
         static void LoadHighScores();
 
+        //Get the highest score
         static int GetHighScore();
 
+        //Get the ranking of te new highscore
         static int GetHighScore(int searchScore);
 
         static void AddNewScore(int score);

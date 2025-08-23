@@ -16,9 +16,15 @@ add_executable(SnakeGame
     src/controller.cpp 
     src/renderer.cpp 
     src/snake.cpp
+    src/highscore.cpp
+    src/GameObject.cpp
+    src/Food.cpp
+    src/FastFood.cpp
+    src/SlowFood.cpp
 )
 
 message(STATUS "SDL2 Libraries: ${SDL2_LIBRARIES}")
+
 
 target_compile_definitions(SnakeGame PRIVATE SDL_MAIN_HANDLED)
 

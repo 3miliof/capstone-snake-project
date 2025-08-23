@@ -4,12 +4,16 @@
 #include <atomic>
 #include "SDL.h"
 #include "highscore.h"
+#include "FastFood.h"
+#include "SlowFood.h"
 
 Game::Game(std::size_t grid_width, std::size_t grid_height)
     : snake(grid_width, grid_height),
       engine(dev()),
       random_w(0, static_cast<int>(grid_width - 1)),
-      random_h(0, static_cast<int>(grid_height - 1)) {
+      random_h(0, static_cast<int>(grid_height - 1)),
+      random_type(0, static_cast<int>(1))
+       {
   PlaceFood();
 }
 
@@ -98,7 +102,7 @@ void Game::PlaceBomb()
   
     SDL_Point newBomb;
   
-    if(!snake.SnakeCell(x,y) && !(x == food.x && y == food.y))
+    if(!snake.SnakeCell(x,y) && !(x == food->GetX() && y == food->GetY()))
     {
       std::lock_guard<std::mutex> lock(bombs_mutex);
       if(!BombPresent(x, y))
@@ -126,18 +130,28 @@ bool Game::BombPresent(int &x, int &y)
 }
 
 void Game::PlaceFood() {
-  int x, y;
+  int x, y, type;
   while (true) {
-    x = random_w(engine);
-    y = random_h(engine);
-    // Check that the location is not occupied by a snake item before placing
-    // food.
-    std::lock_guard<std::mutex> lock(bombs_mutex);
-    if (!snake.SnakeCell(x, y) && !BombPresent(x, y)) {
-      food.x = x;
-      food.y = y;
-      return;
-    }
+    type = random_type(engine);
+      x = random_w(engine);
+      y = random_h(engine);
+      // Check that the location is not occupied by a snake item before placing
+      // food.
+      std::lock_guard<std::mutex> lock(bombs_mutex);
+      if (!snake.SnakeCell(x, y) && !BombPresent(x, y)) {
+        
+        if(type == 0)
+        { 
+          food = std::make_shared<FastFood>();
+        } 
+        else
+        {
+          food = std::make_shared<SlowFood>();
+        }
+        food->SetPosition(x, y);
+        food->CalculateSpeedMultiplier();
+        return;
+      }
   }
 }
 
@@ -154,12 +168,12 @@ void Game::Update(std::atomic<bool>& running) {
   int new_y = static_cast<int>(snake.head_y);
   
   // Check if there's food over here
-  if (food.x == new_x && food.y == new_y) {
+  if (food->GetX() == new_x && food->GetY() == new_y) {
     score++;
     PlaceFood();
     // Grow snake and increase speed.
     snake.GrowBody();
-    snake.speed += 0.02;
+    snake.speed *= food->GetSpeedMultiplier();
   }
 
   if(BombPresent(new_x, new_y))

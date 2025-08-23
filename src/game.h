@@ -9,6 +9,8 @@
 #include "highscore.h"
 #include <atomic>
 #include <mutex>
+#include "Food.h"
+#include <memory>
 
 class Game {
  public:
@@ -20,7 +22,7 @@ class Game {
 
  private:
   Snake snake;
-  SDL_Point food;
+  std::shared_ptr<Food> food;
   std::vector<SDL_Point> bombs;
   Highscore HighscoreTable;
 
@@ -28,6 +30,7 @@ class Game {
   std::mt19937 engine;
   std::uniform_int_distribution<int> random_w;
   std::uniform_int_distribution<int> random_h;
+  std::uniform_int_distribution<int> random_type;
 
   int score{0};
 

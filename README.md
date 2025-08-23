@@ -1,46 +1,39 @@
 # CPPND: Capstone Snake Game Example
 
-This is a starter repo for the Capstone project in the [Udacity C++ Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213). The code for this repo was inspired by [this](https://codereview.stackexchange.com/questions/212296/snake-game-in-c-with-sdl) excellent StackOverflow post and set of responses.
+Built upon the starter repo for the Capstone project in the [Udacity C++ Nanodegree Program](https://github.com/udacity/CppND-Capstone-Snake-Game).
 
-<img src="snake_game.gif"/>
+## Instructions to run
+Make a build directory in the top level directory: mkdir build && cd build
+Compile: cmake .. && make
+Run it: ./SnakeGame.
 
-The Capstone Project gives you a chance to integrate what you've learned throughout this program. This project will become an important part of your portfolio to share with current and future colleagues and employers.
+## New behaviours
+- Food will either increase or decrease the speed of the snake. This is to be random and hidden from the user for extra difficulty
+- Red "poison" will spawn every 2 seconds to add increased difficulty to the game. If these are eaten the game will end.
+- Highscores will be saved to a file and a ranking is output at the end of the game
 
-In this project, you can build your own C++ application or extend this Snake game, following the principles you have learned throughout this Nanodegree Program. This project will demonstrate that you can independently create applications using a wide range of C++ features.
+## Rubric Points Addressed:
+### Compiling and Testing (All Rubric Points REQUIRED)
+| The submission must compile and run without errors on the Udacity project workspace. | ✓ | Runs without errors 
 
-## Dependencies for Running Locally
-* cmake >= 3.7
-  * All OSes: [click here for installation instructions](https://cmake.org/install/)
-* make >= 4.1 (Linux, Mac), 3.81 (Windows)
-  * Linux: make is installed by default on most Linux distros
-  * Mac: [install Xcode command line tools to get make](https://developer.apple.com/xcode/features/)
-  * Windows: [Click here for installation instructions](http://gnuwin32.sourceforge.net/packages/make.htm)
-* SDL2 >= 2.0
-  * All installation instructions can be found [here](https://wiki.libsdl.org/Installation)
-  >Note that for Linux, an `apt` or `apt-get` installation is preferred to building from source. 
-* gcc/g++ >= 5.4
-  * Linux: gcc / g++ is installed by default on most Linux distros
-  * Mac: same deal as make - [install Xcode command line tools](https://developer.apple.com/xcode/features/)
-  * Windows: recommend using [MinGW](http://www.mingw.org/)
-
-## Basic Build Instructions
-
-1. Clone this repo.
-2. Make a build directory in the top level directory: `mkdir build && cd build`
-3. Compile: `cmake .. && make`
-4. Run it: `./SnakeGame`.
+### Loops, Functions, I/O - meet at least 2 criteria
+The project demonstrates an understanding of C++ functions and control structures. | ✓ | Examples - while loop in Game::PlaceFood() line 134, if statement in Game::PlaceFood() line 141, for loop in Renderer::Render() line 56.
+The project reads data from a file and process the data, or the program writes data to a file. | ✓  | Added Highscore.h and .cpp to create, read from and write to a highscore file to persist between games. 
+The project uses arrays or vectors and uses constant variables. | ✓  |   std::vector line 26 game.h, const variables used GameObject.h setters. 
 
 
-## CC Attribution-ShareAlike 4.0 International
+### Object Oriented Programming - meet at least 3 criteria
+One or more classes are added to the project with appropriate access specifiers for class members. | ✓ | Multiple new classes added, all with access modifiers, GameObject.h example of getters and setters to protect non-const position variables.
+Overloaded functions allow the same function to operate on different parameters. | ✓ | Highscore::GetHighScore() and HighScore::GetHighScore(int) example of overloaded function
+Classes follow an appropriate inheritance hierarchy with virtual and override functions. | ✓ | Both Food types inherit from Food class, extended from base GameObject class. FastFood and SlowFood have seperate implementations of pure virtual CalculateMultiplierSpeed
 
+### Memory Management - meet at least 3 criteria
+The project makes use of references in function declarations. | ✓ | GameObject.h::SetPosition takes an int reference for each x and y.
+The project uses scope / Resource Acquisition Is Initialization (RAII) where appropriate. | ✓ | Game::PlaceFood() line 145 and line 149, causes previous food object to go out of scope and be collected on creation of the new food object. 
+The project follows the Rule of 5. | ✓ | Originally the only class using a destructor was Renderer. This was removed so no class uses any of the 5 special functions, and therefore the rule is not violated
+The project uses smart pointers instead of raw pointers. | ✓ | Game.h line 25 uses a shared ptr to a "Food" object.
 
-Shield: [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
+### Concurrency - meet at least 2 criteria
+The project uses multithreading. | ✓ | Game.cpp line 32 uses a seperate thread to spawn new bombs every 2 seconds
+A mutex or lock is used in the project. | ✓ | Game.cpp line 49 mutex used to copy the contents of bomb locations to avoid it being changed before a snapshot is taken to be used for rendering
 
-This work is licensed under a
-[Creative Commons Attribution-ShareAlike 4.0 International License][cc-by-sa].
-
-[![CC BY-SA 4.0][cc-by-sa-image]][cc-by-sa]
-
-[cc-by-sa]: http://creativecommons.org/licenses/by-sa/4.0/
-[cc-by-sa-image]: https://licensebuttons.net/l/by-sa/4.0/88x31.png
-[cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
