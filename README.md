@@ -5,7 +5,7 @@ Built upon the starter repo for the Capstone project in the [Udacity C++ Nanodeg
 ## Instructions to run
 Make a build directory in the top level directory: mkdir build && cd build
 Compile: cmake .. && make
-Run it: ./SnakeGame.
+Run it: ./SnakeGame.exe
 
 ## New behaviours
 - Food will either increase or decrease the speed of the snake. This is to be random and hidden from the user for extra difficulty
