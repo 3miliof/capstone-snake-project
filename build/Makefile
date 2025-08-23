@@ -60,15 +60,15 @@ EQUALS = =
 CMAKE_SOURCE_DIR = C:/Users/Emilio/Documents/Udacity/CppND-Capstone-Snake-Game
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:/users/Emilio/Documents/Udacity/CppND-Capstone-Snake-Game/build
+CMAKE_BINARY_DIR = C:/Users/Emilio/Documents/Udacity/CppND-Capstone-Snake-Game/build
 
 #=============================================================================
 # Targets provided globally by CMake.
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "No interactive CMake dialog available..."
-	C:/msys64/mingw64/bin/cmake.exe -E echo "No interactive CMake dialog available."
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
+	"C:/Program Files/CMake/bin/cmake-gui.exe" -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:/users/Emilio/Documents/Udacity/CppND-Capstone-Snake-Game/build/CMakeFiles C:/users/Emilio/Documents/Udacity/CppND-Capstone-Snake-Game/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:/Users/Emilio/Documents/Udacity/CppND-Capstone-Snake-Game/build/CMakeFiles C:/Users/Emilio/Documents/Udacity/CppND-Capstone-Snake-Game/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:/users/Emilio/Documents/Udacity/CppND-Capstone-Snake-Game/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:/Users/Emilio/Documents/Udacity/CppND-Capstone-Snake-Game/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -128,6 +128,102 @@ SnakeGame: cmake_check_build_system
 SnakeGame/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/build
 .PHONY : SnakeGame/fast
+
+src/FastFood.obj: src/FastFood.cpp.obj
+.PHONY : src/FastFood.obj
+
+# target to build an object file
+src/FastFood.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/FastFood.cpp.obj
+.PHONY : src/FastFood.cpp.obj
+
+src/FastFood.i: src/FastFood.cpp.i
+.PHONY : src/FastFood.i
+
+# target to preprocess a source file
+src/FastFood.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/FastFood.cpp.i
+.PHONY : src/FastFood.cpp.i
+
+src/FastFood.s: src/FastFood.cpp.s
+.PHONY : src/FastFood.s
+
+# target to generate assembly for a file
+src/FastFood.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/FastFood.cpp.s
+.PHONY : src/FastFood.cpp.s
+
+src/Food.obj: src/Food.cpp.obj
+.PHONY : src/Food.obj
+
+# target to build an object file
+src/Food.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/Food.cpp.obj
+.PHONY : src/Food.cpp.obj
+
+src/Food.i: src/Food.cpp.i
+.PHONY : src/Food.i
+
+# target to preprocess a source file
+src/Food.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/Food.cpp.i
+.PHONY : src/Food.cpp.i
+
+src/Food.s: src/Food.cpp.s
+.PHONY : src/Food.s
+
+# target to generate assembly for a file
+src/Food.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/Food.cpp.s
+.PHONY : src/Food.cpp.s
+
+src/GameObject.obj: src/GameObject.cpp.obj
+.PHONY : src/GameObject.obj
+
+# target to build an object file
+src/GameObject.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/GameObject.cpp.obj
+.PHONY : src/GameObject.cpp.obj
+
+src/GameObject.i: src/GameObject.cpp.i
+.PHONY : src/GameObject.i
+
+# target to preprocess a source file
+src/GameObject.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/GameObject.cpp.i
+.PHONY : src/GameObject.cpp.i
+
+src/GameObject.s: src/GameObject.cpp.s
+.PHONY : src/GameObject.s
+
+# target to generate assembly for a file
+src/GameObject.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/GameObject.cpp.s
+.PHONY : src/GameObject.cpp.s
+
+src/SlowFood.obj: src/SlowFood.cpp.obj
+.PHONY : src/SlowFood.obj
+
+# target to build an object file
+src/SlowFood.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/SlowFood.cpp.obj
+.PHONY : src/SlowFood.cpp.obj
+
+src/SlowFood.i: src/SlowFood.cpp.i
+.PHONY : src/SlowFood.i
+
+# target to preprocess a source file
+src/SlowFood.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/SlowFood.cpp.i
+.PHONY : src/SlowFood.cpp.i
+
+src/SlowFood.s: src/SlowFood.cpp.s
+.PHONY : src/SlowFood.s
+
+# target to generate assembly for a file
+src/SlowFood.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/SlowFood.cpp.s
+.PHONY : src/SlowFood.cpp.s
 
 src/controller.obj: src/controller.cpp.obj
 .PHONY : src/controller.obj
@@ -176,6 +272,30 @@ src/game.s: src/game.cpp.s
 src/game.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/game.cpp.s
 .PHONY : src/game.cpp.s
+
+src/highscore.obj: src/highscore.cpp.obj
+.PHONY : src/highscore.obj
+
+# target to build an object file
+src/highscore.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/highscore.cpp.obj
+.PHONY : src/highscore.cpp.obj
+
+src/highscore.i: src/highscore.cpp.i
+.PHONY : src/highscore.i
+
+# target to preprocess a source file
+src/highscore.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/highscore.cpp.i
+.PHONY : src/highscore.cpp.i
+
+src/highscore.s: src/highscore.cpp.s
+.PHONY : src/highscore.s
+
+# target to generate assembly for a file
+src/highscore.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/highscore.cpp.s
+.PHONY : src/highscore.cpp.s
 
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
@@ -258,12 +378,27 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... SnakeGame"
+	@echo "... src/FastFood.obj"
+	@echo "... src/FastFood.i"
+	@echo "... src/FastFood.s"
+	@echo "... src/Food.obj"
+	@echo "... src/Food.i"
+	@echo "... src/Food.s"
+	@echo "... src/GameObject.obj"
+	@echo "... src/GameObject.i"
+	@echo "... src/GameObject.s"
+	@echo "... src/SlowFood.obj"
+	@echo "... src/SlowFood.i"
+	@echo "... src/SlowFood.s"
 	@echo "... src/controller.obj"
 	@echo "... src/controller.i"
 	@echo "... src/controller.s"
 	@echo "... src/game.obj"
 	@echo "... src/game.i"
 	@echo "... src/game.s"
+	@echo "... src/highscore.obj"
+	@echo "... src/highscore.i"
+	@echo "... src/highscore.s"
 	@echo "... src/main.obj"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

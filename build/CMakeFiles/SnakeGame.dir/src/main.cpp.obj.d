@@ -345,9 +345,12 @@ CMakeFiles/SnakeGame.dir/src/main.cpp.obj: \
  C:/msys64/mingw64/include/SDL2/SDL_version.h \
  C:/msys64/mingw64/include/SDL2/SDL_locale.h \
  C:/msys64/mingw64/include/SDL2/SDL_misc.h \
+ C:/msys64/mingw64/include/c++/15.2.0/atomic \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/atomic_base.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/atomic_lockfree_defines.h \
+ C:/msys64/mingw64/include/c++/15.2.0/cstdint \
  C:/Users/Emilio/Documents/Udacity/CppND-Capstone-Snake-Game/src/game.h \
  C:/msys64/mingw64/include/c++/15.2.0/random \
- C:/msys64/mingw64/include/c++/15.2.0/cstdint \
  C:/msys64/mingw64/include/c++/15.2.0/bits/random.h \
  C:/msys64/mingw64/include/c++/15.2.0/bits/uniform_int_dist.h \
  C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/opt_random.h \
@@ -356,4 +359,39 @@ CMakeFiles/SnakeGame.dir/src/main.cpp.obj: \
  C:/msys64/mingw64/include/c++/15.2.0/bits/stl_numeric.h \
  C:/msys64/mingw64/include/c++/15.2.0/pstl/glue_numeric_defs.h \
  C:/msys64/mingw64/include/c++/15.2.0/pstl/execution_defs.h \
- C:/Users/Emilio/Documents/Udacity/CppND-Capstone-Snake-Game/src/renderer.h
+ C:/Users/Emilio/Documents/Udacity/CppND-Capstone-Snake-Game/src/renderer.h \
+ C:/Users/Emilio/Documents/Udacity/CppND-Capstone-Snake-Game/src/Food.h \
+ C:/msys64/mingw64/include/c++/15.2.0/mutex \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/chrono.h \
+ C:/msys64/mingw64/include/c++/15.2.0/ratio \
+ C:/msys64/mingw64/include/c++/15.2.0/ctime \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/parse_numbers.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/std_mutex.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/unique_lock.h \
+ C:/Users/Emilio/Documents/Udacity/CppND-Capstone-Snake-Game/src/GameObject.h \
+ C:/msys64/mingw64/include/c++/15.2.0/memory \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/stl_tempbuf.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/stl_raw_storage_iter.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/align.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/unique_ptr.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/shared_ptr.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/shared_ptr_base.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/allocated_ptr.h \
+ C:/msys64/mingw64/include/c++/15.2.0/ext/aligned_buffer.h \
+ C:/msys64/mingw64/include/c++/15.2.0/ext/concurrence.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/shared_ptr_atomic.h \
+ C:/msys64/mingw64/include/c++/15.2.0/backward/auto_ptr.h \
+ C:/msys64/mingw64/include/c++/15.2.0/pstl/glue_memory_defs.h \
+ C:/Users/Emilio/Documents/Udacity/CppND-Capstone-Snake-Game/src/highscore.h \
+ C:/msys64/mingw64/include/c++/15.2.0/fstream \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/codecvt.h \
+ C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/basic_file.h \
+ C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++io.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/fstream.tcc \
+ C:/msys64/mingw64/include/c++/15.2.0/sstream \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/sstream.tcc \
+ C:/msys64/mingw64/include/c++/15.2.0/algorithm \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/stl_algo.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/algorithmfwd.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/stl_heap.h \
+ C:/msys64/mingw64/include/c++/15.2.0/pstl/glue_algorithm_defs.h

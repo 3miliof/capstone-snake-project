@@ -40,7 +40,7 @@ endif()
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "C:/users/Emilio/Documents/Udacity/CppND-Capstone-Snake-Game/build/install_local_manifest.txt"
+  file(WRITE "C:/Users/Emilio/Documents/Udacity/CppND-Capstone-Snake-Game/build/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
 if(CMAKE_INSTALL_COMPONENT)
@@ -56,6 +56,6 @@ else()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "C:/users/Emilio/Documents/Udacity/CppND-Capstone-Snake-Game/build/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "C:/Users/Emilio/Documents/Udacity/CppND-Capstone-Snake-Game/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

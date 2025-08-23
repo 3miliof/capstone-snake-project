@@ -8,8 +8,13 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "C:/Users/Emilio/Documents/Udacity/CppND-Capstone-Snake-Game/src/FastFood.cpp" "CMakeFiles/SnakeGame.dir/src/FastFood.cpp.obj" "gcc" "CMakeFiles/SnakeGame.dir/src/FastFood.cpp.obj.d"
+  "C:/Users/Emilio/Documents/Udacity/CppND-Capstone-Snake-Game/src/Food.cpp" "CMakeFiles/SnakeGame.dir/src/Food.cpp.obj" "gcc" "CMakeFiles/SnakeGame.dir/src/Food.cpp.obj.d"
+  "C:/Users/Emilio/Documents/Udacity/CppND-Capstone-Snake-Game/src/GameObject.cpp" "CMakeFiles/SnakeGame.dir/src/GameObject.cpp.obj" "gcc" "CMakeFiles/SnakeGame.dir/src/GameObject.cpp.obj.d"
+  "C:/Users/Emilio/Documents/Udacity/CppND-Capstone-Snake-Game/src/SlowFood.cpp" "CMakeFiles/SnakeGame.dir/src/SlowFood.cpp.obj" "gcc" "CMakeFiles/SnakeGame.dir/src/SlowFood.cpp.obj.d"
   "C:/Users/Emilio/Documents/Udacity/CppND-Capstone-Snake-Game/src/controller.cpp" "CMakeFiles/SnakeGame.dir/src/controller.cpp.obj" "gcc" "CMakeFiles/SnakeGame.dir/src/controller.cpp.obj.d"
   "C:/Users/Emilio/Documents/Udacity/CppND-Capstone-Snake-Game/src/game.cpp" "CMakeFiles/SnakeGame.dir/src/game.cpp.obj" "gcc" "CMakeFiles/SnakeGame.dir/src/game.cpp.obj.d"
+  "C:/Users/Emilio/Documents/Udacity/CppND-Capstone-Snake-Game/src/highscore.cpp" "CMakeFiles/SnakeGame.dir/src/highscore.cpp.obj" "gcc" "CMakeFiles/SnakeGame.dir/src/highscore.cpp.obj.d"
   "C:/Users/Emilio/Documents/Udacity/CppND-Capstone-Snake-Game/src/main.cpp" "CMakeFiles/SnakeGame.dir/src/main.cpp.obj" "gcc" "CMakeFiles/SnakeGame.dir/src/main.cpp.obj.d"
   "C:/Users/Emilio/Documents/Udacity/CppND-Capstone-Snake-Game/src/renderer.cpp" "CMakeFiles/SnakeGame.dir/src/renderer.cpp.obj" "gcc" "CMakeFiles/SnakeGame.dir/src/renderer.cpp.obj.d"
   "C:/Users/Emilio/Documents/Udacity/CppND-Capstone-Snake-Game/src/snake.cpp" "CMakeFiles/SnakeGame.dir/src/snake.cpp.obj" "gcc" "CMakeFiles/SnakeGame.dir/src/snake.cpp.obj.d"

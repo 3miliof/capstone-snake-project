@@ -3,7 +3,7 @@
 
 # Relative path conversion top directories.
 set(CMAKE_RELATIVE_PATH_TOP_SOURCE "C:/Users/Emilio/Documents/Udacity/CppND-Capstone-Snake-Game")
-set(CMAKE_RELATIVE_PATH_TOP_BINARY "C:/users/Emilio/Documents/Udacity/CppND-Capstone-Snake-Game/build")
+set(CMAKE_RELATIVE_PATH_TOP_BINARY "C:/Users/Emilio/Documents/Udacity/CppND-Capstone-Snake-Game/build")
 
 # Force unix paths in dependencies.
 set(CMAKE_FORCE_UNIX_PATHS 1)

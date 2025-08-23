@@ -8,6 +8,10 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "C:/Users/Emilio/Documents/Udacity/CppND-Capstone-Snake-Game/CMakeLists.txt"
+  "CMakeFiles/4.1.0/CMakeCCompiler.cmake"
+  "CMakeFiles/4.1.0/CMakeCXXCompiler.cmake"
+  "CMakeFiles/4.1.0/CMakeRCCompiler.cmake"
+  "CMakeFiles/4.1.0/CMakeSystem.cmake"
   "C:/msys64/mingw64/lib/cmake/SDL2/SDL2Config.cmake"
   "C:/msys64/mingw64/lib/cmake/SDL2/SDL2ConfigVersion.cmake"
   "C:/msys64/mingw64/lib/cmake/SDL2/SDL2Targets-release.cmake"
@@ -52,10 +56,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/msys64/mingw64/share/cmake/Modules/Platform/Windows-windres.cmake"
   "C:/msys64/mingw64/share/cmake/Modules/Platform/Windows.cmake"
   "C:/msys64/mingw64/share/cmake/Modules/Platform/WindowsPaths.cmake"
-  "CMakeFiles/4.1.0/CMakeCCompiler.cmake"
-  "CMakeFiles/4.1.0/CMakeCXXCompiler.cmake"
-  "CMakeFiles/4.1.0/CMakeRCCompiler.cmake"
-  "CMakeFiles/4.1.0/CMakeSystem.cmake"
   )
 
 # The corresponding makefile is:

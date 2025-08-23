@@ -283,6 +283,10 @@ CMakeFiles/SnakeGame.dir/src/controller.cpp.obj: \
  C:/msys64/mingw64/include/SDL2/SDL_version.h \
  C:/msys64/mingw64/include/SDL2/SDL_locale.h \
  C:/msys64/mingw64/include/SDL2/SDL_misc.h \
+ C:/msys64/mingw64/include/c++/15.2.0/atomic \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/atomic_base.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/atomic_lockfree_defines.h \
+ C:/msys64/mingw64/include/c++/15.2.0/cstdint \
  C:/msys64/mingw64/include/c++/15.2.0/iostream \
  C:/msys64/mingw64/include/c++/15.2.0/ostream \
  C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h \
